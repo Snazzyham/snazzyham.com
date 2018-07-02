@@ -26,6 +26,20 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: "gatsby-transformer-json",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-source-filesystem",
+            options: {
+              path: `${__dirname}/src/folio_data`,
+              name: "folio_data"
+            }
+          }
+        ]
+      }
     }
   ]
 };

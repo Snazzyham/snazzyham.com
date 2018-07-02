@@ -2,14 +2,10 @@ import React from "react";
 import Link from "gatsby-link";
 
 const Header = ({ siteTitle }) =>
-  <div>
-    <div>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <div class>
+    <Link to="/">🏠</Link>
+    <Link to="/writing/">✍</Link>
+    <Link to="/portfolio/"> 💼</Link>
   </div>;
 
 export default Header;

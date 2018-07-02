@@ -11,6 +11,7 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-json": "^1.0.20",
     "gatsby-transformer-remark": "^1.7.44",
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
