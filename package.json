@@ -9,10 +9,12 @@
     "gatsby-plugin-preact": "^1.0.17",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
+    "prismjs": "^1.15.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

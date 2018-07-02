@@ -6,6 +6,7 @@ export default function Template({ data }) {
   console.log(data);
   return (
     <div>
+      <Helmet title={`${post.frontmatter.title} - Soham&#39;s Code Blog`} />
       <h1>
         {post.frontmatter.title}
       </h1>
