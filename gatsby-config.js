@@ -5,6 +5,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-preact",
-    "gatsby-plugin-sass"
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: "posts"
+      }
+    },
+    "gatsby-transformer-remark"
   ]
 };
