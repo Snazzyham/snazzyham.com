@@ -9,6 +9,7 @@ export default function Template({ data }) {
       <h1>
         {post.frontmatter.title}
       </h1>
+      <article dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
 }
