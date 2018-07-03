@@ -14,11 +14,7 @@ const ItemContainer = props =>
   </div>;
 
 const PortfolioPage = ({ data }) =>
-  <div>
-    <h1>Hi from the portfolio page</h1>
-    <p>Welcome to page 3</p>
-    <Link to="/">Go back to the homepage</Link>
-
+  <div class="fl w-100">
     {data.allFolioDataJson.edges.map(x =>
       <ItemContainer
         key={x.node.id}

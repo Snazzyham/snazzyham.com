@@ -15,11 +15,7 @@ const PostContainer = props =>
   </div>;
 
 const WritingPage = ({ data }) =>
-  <div>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-
+  <div class="fl w-100">
     {data.allMarkdownRemark.edges.map(x =>
       <PostContainer
         key={x.node.id}
