@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "snazzyham-com",
+  "description": "Soham Adwani's personal landing page",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Soham Adwani <snazzyham@gmail.com>",
   "dependencies": {
+    "dayjs": "^1.7.0",
     "gatsby": "^1.9.273",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-preact": "^1.0.17",
@@ -33,6 +34,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/snazzyham/snazzyham.com"
   }
 }
