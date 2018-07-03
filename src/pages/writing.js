@@ -20,8 +20,8 @@ const PostContainer = props =>
 const WritingPage = ({ data }) =>
   <div class="fl w-100">
     <div class="fl w-100 ph5 tc mb5-ns mb3">
-      <img src={Terminal} alt="Code" width={150} class="mr4-ns" />
-      <img src={Pencil} alt="blog" width={135} />
+      <img src={Terminal} alt="Code" class="mr4-ns mr3 code-icon" />
+      <img src={Pencil} alt="blog" class="blog-icon" />
     </div>
     {data.allMarkdownRemark.edges.map(x =>
       <PostContainer

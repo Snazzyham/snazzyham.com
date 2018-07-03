@@ -43,7 +43,7 @@ const BodyContent = props =>
   </div>;
 
 const SocialSection = () =>
-  <div class="fl w-70-ns pl5-ns pv2">
+  <div class="fl w-70-ns pl5-ns pv2 w-100 pl2">
     <h2 class="f3">Obligatory internet presence section</h2>
     <SocialContainer
       logo={TwitterLogo}
@@ -73,13 +73,17 @@ const SocialSection = () =>
   </div>;
 
 const SocialContainer = props =>
-  <div class="flex mv4-ns mv3">
-    <img src={props.logo} alt={props.title} class="fl self-center" width="54" />
+  <div class="mv4-ns mv3">
+    <img
+      src={props.logo}
+      alt={props.title}
+      class="fl self-center social-icons mr4-ns mr3"
+    />
     <div class="flex flex-column ml3-ns mt1">
-      <a href={props.link} target="_blank" class="link dim f4 black-80 b">
+      <a href={props.link} target="_blank" class="link dim f4-ns f5 black-80 b">
         {props.title}
       </a>
-      <p class="black-70 f6 mt0">
+      <p class="black-70 f6-ns f7 mt0 w-70 w-90-ns">
         {props.description}
       </p>
     </div>

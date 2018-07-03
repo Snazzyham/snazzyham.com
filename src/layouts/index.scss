@@ -30,3 +30,36 @@ article {
     }
   }
 }
+
+.social-icons {
+  width: 54px;
+  margin-top: 6px;
+  @media screen and (max-width: 30em) {
+    width: 42px;
+    margin-top: 2px;
+  }
+}
+
+.code-icon {
+  width: 150px;
+
+  @media screen and (max-width: 30em) {
+    width: 75px;
+  }
+}
+
+.blog-icon {
+  width: 135px;
+
+  @media screen and (max-width: 30em) {
+    width: 65px;
+  }
+}
+
+.portfolio-icon {
+  width: 135px;
+
+  @media screen and (max-width: 30em) {
+    width: 65px;
+  }
+}
