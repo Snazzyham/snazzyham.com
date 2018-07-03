@@ -1,16 +1,23 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Link from "gatsby-link";
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   console.log(data);
   return (
-    <div>
+    <div class="fl w-80-ns w-90 center ph5-ns ph3 pv2 lh-copy">
       <Helmet title={`${post.frontmatter.title} - Soham&#39;s Code Blog`} />
       <h1>
         {post.frontmatter.title}
       </h1>
-      <article dangerouslySetInnerHTML={{ __html: post.html }} />
+      <article
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        class="lh-copy black-80 f5"
+      />
+      <Link to="/writing" class="link">
+        <h4 class="black-80 ttu tracked link dim">&lt; Back to blog</h4>
+      </Link>
     </div>
   );
 }
