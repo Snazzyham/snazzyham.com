@@ -3,6 +3,7 @@ layout: post
 title: Simpledown 1.2
 slug: simpledown-one-point-two
 subtitle: Small, significant changes.
+date_published: 2016-08-14T11:42:02.000Z
 ---
 
 What seems like a lifetime ago now, I pushed simpledown to the web. Simpledown was born out of a need for a simple text editor, with markdown support, that would let me immediately pull up a browser and start writing down my thoughts. Having a simple, browser based (due to constraints that I had [previously written about](http://snazzyham.com/2016/01/10/necessary-redesign/)) markdown editor was something I had always wanted, but was never really motivated to build. That is until I found the example in the Vue.js docs. I basically took that version, wrapped it in some html and css, and threw it onto a server. One day into using it, I hated it. So I scrapped the entire thing. However, having already had a taste of what I was looking for, I sought out some github repo's that would help me do what I want. A day or so later,  I had a better, more usable version. And that's how Simpledown 1.1 was born.  

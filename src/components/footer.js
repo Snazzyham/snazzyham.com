@@ -5,7 +5,14 @@ const Footer = ({ siteTitle }) =>
     <div class="w-50-ns">
       <p class="f6 black-70">
         &copy; whichever year it is now. This site was built using Gatsby.js and
-        Tachyons. You can find the code <a href="">here.</a>
+        Tachyons. You can find the code{" "}
+        <a
+          href="https://github.com/snazzyham/snazzyham.com"
+          target="_blank"
+          class="link dim silver"
+        >
+          here.
+        </a>
       </p>
     </div>
   </div>;

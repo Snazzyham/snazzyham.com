@@ -76,7 +76,7 @@ const SocialContainer = props =>
   <div class="flex mv4-ns mv3">
     <img src={props.logo} alt={props.title} class="fl self-center" width="54" />
     <div class="flex flex-column ml3-ns mt1">
-      <a href={props.link} class="link dim f4 black-80 b">
+      <a href={props.link} target="_blank" class="link dim f4 black-80 b">
         {props.title}
       </a>
       <p class="black-70 f6 mt0">

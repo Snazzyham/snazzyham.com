@@ -2,6 +2,7 @@
 title: Setting up skeleton files with Vim
 layout: post
 slug: probably-an-outdated-post
+date_published: 2016-07-11T11:42:02.000Z
 ---
  
 Vim, for those of you who use it _(I mean if you don't use it this article probably is of no use to you)_, is actually a pretty powerful tool. I've been using it on and off lately, and I'm still trying to get the hang of it myself.   
