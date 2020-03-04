@@ -1,19 +1,20 @@
-import React from "react";
-import Link from "gatsby-link";
-import TwitterLogo from "../images/twitter.svg";
-import InstagramLogo from "../images/instagram.svg";
-import GithubLogo from "../images/github.svg";
-import SpotifyLogo from "../images/spotify.svg";
+import React from 'react'
+import Link from 'gatsby-link'
+import TwitterLogo from '../images/twitter.svg'
+import InstagramLogo from '../images/instagram.svg'
+import GithubLogo from '../images/github.svg'
+import SpotifyLogo from '../images/spotify.svg'
 
-const SiteTitle = () =>
+const SiteTitle = () => (
   <div class="fl w-60-ns w-80 ph5-ns ph3 pv2">
-    <h5 class="black-70 mb0 fw3">Hi, my name is</h5>
+    <h5 class="white-50 mb0 fw3">Hi, my name is</h5>
     <h1 class="mv0 f1">Soham Adwani</h1>
-    <h5 class="black-70 mt0 fw3">I like using code to solve problems.</h5>
-  </div>;
+    <h5 class="white-50 mt0 fw3">I like using code to solve problems.</h5>
+  </div>
+)
 
-const BodyContent = props =>
-  <div class="fl w-70-l w-90 f4 black-80 ph5-ns ph3 pv2 lh-copy">
+const BodyContent = props => (
+  <div class="fl w-70-l w-90 f4 bg-snz-black snz-white ph5-ns ph3 pv2 lh-copy">
     <p>
       I’m a full-stack developer, working mostly with Node.js, whichever front
       end framework is hype right now, and Go(lang). I also work with a lot of
@@ -40,9 +41,10 @@ const BodyContent = props =>
       If you want to get in touch, Twitter and Insta DM’s are open, or you could
       email me: snazzyham [at] gmail [dot] com.
     </p>
-  </div>;
+  </div>
+)
 
-const SocialSection = () =>
+const SocialSection = () => (
   <div class="fl w-70-ns pl5-ns pv2 w-100 pl2">
     <h2 class="f3">Obligatory internet presence section</h2>
     <SocialContainer
@@ -70,9 +72,10 @@ const SocialSection = () =>
       link="https://open.spotify.com/user/snazzyham"
       description="I make fire playlists. Or at least my cat thinks so."
     />
-  </div>;
+  </div>
+)
 
-const SocialContainer = props =>
+const SocialContainer = props => (
   <div class="mv4-ns mv3">
     <img
       src={props.logo}
@@ -80,20 +83,24 @@ const SocialContainer = props =>
       class="fl self-center social-icons mr4-ns mr3"
     />
     <div class="flex flex-column ml3-ns mt1">
-      <a href={props.link} target="_blank" class="link dim f4-ns f5 black-80 b">
+      <a
+        href={props.link}
+        target="_blank"
+        class="link dim f4-ns f5 snz-white b"
+      >
         {props.title}
       </a>
-      <p class="black-70 f6-ns f7 mt0 w-70 w-90-ns">
-        {props.description}
-      </p>
+      <p class="white-70 f6-ns f7 mt0 w-70 w-90-ns">{props.description}</p>
     </div>
-  </div>;
+  </div>
+)
 
-const IndexPage = () =>
-  <div class="fl w-100">
+const IndexPage = () => (
+  <div class="fl w-100 bg-snz-black snz-white">
     <SiteTitle />
     <BodyContent />
     <SocialSection />
-  </div>;
+  </div>
+)
 
-export default IndexPage;
+export default IndexPage

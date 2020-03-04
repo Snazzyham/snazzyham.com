@@ -1,42 +1,41 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 
-import Header from "../components/header";
-import Footer from "../components/footer";
-import "./tachyons.min.css";
-import "./index.scss";
-import "prismjs/themes/prism-tomorrow.css";
+import Header from '../components/header'
+import Footer from '../components/footer'
+import './tachyons.min.css'
+import './index.scss'
+import 'prismjs/themes/prism-tomorrow.css'
 
-const Layout = ({ children, data }) =>
+const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "Soham Adwani is a full stack web application developer based in Indonesia."
+            'Soham Adwani is a full stack web application developer based in Indonesia.',
         },
         {
-          name: "keywords",
+          name: 'keywords',
           content:
-            "developer, jakarta, melbourne, indonesia, javascript, Go(lang)"
-        }
+            'developer, jakarta, melbourne, indonesia, javascript, Go(lang)',
+        },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div class="sans-serif">
-      {children()}
-    </div>
+    <div class="sans-serif body-container">{children()}</div>
     <Footer />
-  </div>;
+  </div>
+)
 
 Layout.propTypes = {
-  children: PropTypes.func
-};
+  children: PropTypes.func,
+}
 
-export default Layout;
+export default Layout
 
 export const query = graphql`
   query SiteTitleQuery {
@@ -46,4 +45,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

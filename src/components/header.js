@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react'
+import Link from 'gatsby-link'
 
-const Header = ({ siteTitle }) =>
-  <div class="fl w-100 pv3-ns lh-copy flex justify-end">
+const Header = ({ siteTitle }) => (
+  <div class="fl w-100 pv3-ns bg-snz-black lh-copy flex justify-end">
     <div class="f2 nav w-third-ns">
       <Link class="dim" to="/">
         🏠
@@ -14,6 +14,7 @@ const Header = ({ siteTitle }) =>
         💼
       </Link>
     </div>
-  </div>;
+  </div>
+)
 
-export default Header;
+export default Header

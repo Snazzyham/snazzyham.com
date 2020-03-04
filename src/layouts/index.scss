@@ -6,10 +6,31 @@ html {
   -webkit-text-size-adjust: 100%;
   margin: 0;
   padding: 0;
+  background-color: #1f1f1f;
+}
+
+.body-container {
+  min-height: 90vh;
+}
+
+.snz-black {
+  color: #1f1f1f;
+}
+
+.bg-snz-black {
+  background-color: #1f1f1f;
+}
+
+.snz-white {
+  color: #f1f3f4;
+}
+
+.bg-snz-white {
+  background-color: #f1f3f4;
 }
 
 .nav {
-  padding: .6rem;
+  padding: 0.6rem;
   display: flex;
   justify-content: flex-end;
 
@@ -23,7 +44,7 @@ article {
   a {
     text-decoration: none;
     color: #2ecc40;
-    transition: all .6s;
+    transition: all 0.6s;
 
     &:hover {
       color: #3d9970;
