@@ -18,17 +18,27 @@ export const getStaticProps = async () => {
 const Index = ({ data, navLinks }) => {
   console.log(data, navLinks);
   return (
-    <Layout>
+    <Layout showNav={false}>
       <div className="homepage">
         <div className="hero">
           <h1>{RichText.asText(data.title)}</h1>
           <h3>{RichText.asText(data.description)}</h3>
           <div className="navlinks">
-            {navLinks.map(x => (
-              <Link key={x.name} href={x.path}>
-                <a>{x.name}</a>
-              </Link>
-            ))}
+            {navLinks.map(x => {
+              if (x.internal === true) {
+                return (
+                  <Link key={x.name} href={x.path}>
+                    <a>{x.name}</a>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a href={x.path} key={x.name} target="_blank">
+                    {x.name}
+                  </a>
+                );
+              }
+            })}
           </div>
         </div>
         <div className="body">
@@ -39,13 +49,25 @@ const Index = ({ data, navLinks }) => {
           <div className="client-content">
             <h3>{data.client_list_title}</h3>
             <ul>
-              {data.clients.map(x => (
-                <li key={x.key}>
-                  <Link href={x.url}>
-                    <a target="_blank">{x.key}</a>
-                  </Link>
-                </li>
-              ))}
+              {data.clients.map(x => {
+                if (x.internal === true) {
+                  return (
+                    <li key={x.key}>
+                      <Link href={x.url}>
+                        <a>{x.key}</a>
+                      </Link>
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li key={x.key}>
+                      <a href={x.url} target="_blank">
+                        {x.key}
+                      </a>
+                    </li>
+                  );
+                }
+              })}
             </ul>
           </div>
         </div>
