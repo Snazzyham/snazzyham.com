@@ -6,5 +6,5 @@ export const getData = async (page, key) => {
     accessToken: process.env.apiKey
   });
   const res = await api.query(Prismic.Predicates.at(page, key));
-  return { data: res.results[0].data };
+  return { data: res };
 };
