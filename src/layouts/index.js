@@ -4,12 +4,9 @@ import Footer from "../components/footer";
 import { motion } from "framer-motion";
 
 const variants = {
-  hide: { opacity: 0, z: -5000, scale: 0.1 },
+  hide: { scale: 0.1 },
   show: {
-    opacity: 1,
-    z: 0,
-    scale: 1,
-    transition: { easing: "ease", duration: 0.5 }
+    scale: 1
   }
 };
 
