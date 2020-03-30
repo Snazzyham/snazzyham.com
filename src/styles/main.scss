@@ -1,5 +1,11 @@
 // Variable Declarations
 
+// sizes
+
+$mobile: 30em;
+$tablet: 48em;
+$toobig: 980px;
+
 // Colors
 
 $black: #1f1f1f;
@@ -14,8 +20,11 @@ $secondary: $white;
 $accent: $darkgray;
 
 html {
-  background-color: $primary;
-  color: $secondary;
+  background-color: $gray;
+}
+
+* {
+  box-sizing: border-box;
 }
 // Fonts
 
@@ -29,22 +38,204 @@ body {
 
 .heading {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: $rubik;
+}
+
+h1 {
+  @extend .heading;
+}
+
+h3 {
+  @extend .subhead;
 }
 
 .subhead {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: $rubik;
+  letter-spacing: 0.03rem;
 }
 
-.link {
+.link,
+a {
   font-family: $rubik;
   font-weight: 300;
   text-decoration: underline;
+  color: inherit;
+  letter-spacing: 1px;
 }
 
 .main {
   min-height: 85vh;
+}
+
+.layout-wrapper {
+  max-width: $toobig;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $primary;
+  color: $secondary;
+
+  @media screen and (min-width: $toobig) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// shared components
+
+.navbar {
+  width: 300px;
+  height: 400px;
+  background-color: tomato;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+    height: 100%;
+
+    li {
+      a {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: " ";
+          height: 4px;
+          width: 8px;
+          border: 1px solid $gray;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+  font-family: $rubik;
+  font-weight: 300;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+// homepage
+
+.hero {
+  height: 400px;
+  background-color: $accent;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+
+  h1 {
+    @extend .heading;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    @extend .subhead;
+    font-size: 1rem;
+    max-width: 40ch;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+
+  .navlinks {
+    width: 60%;
+    display: flex;
+
+    a {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+
+  h3 {
+    @extend .subhead;
+  }
+
+  .body-content {
+    width: 70%;
+
+    p {
+      line-height: 1.5;
+      max-width: 30rem;
+    }
+  }
+
+  .client-content {
+    width: 30%;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+
+    .client-content {
+      width: 70%;
+      margin-top: 2rem;
+    }
+  }
+}
+
+// blog page
+
+.blog-listing {
+  padding-left: 2rem;
+  padding-top: 2rem;
+
+  h1 {
+    @extend .heading;
+    width: 60%;
+  }
+
+  .blog-listing-items {
+    margin-top: 4rem;
+    width: 70%;
+  }
+
+  .item {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    .date {
+      font-family: $rubik;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+    }
+
+    p {
+      max-width: 70%;
+      line-height: 1.5;
+    }
+  }
 }

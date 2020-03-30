@@ -11,7 +11,7 @@ class MyDoc extends Document {
       <Html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Noto+Sans|Rubik:300,600&display=swap"
+            href="https://fonts.googleapis.com/css?family=Noto+Sans|Rubik:300,700&display=swap"
             rel="stylesheet"
           />
           <meta
