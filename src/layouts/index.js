@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 
 const variants = {
   hide: { scale: 0.1 },
@@ -12,10 +12,28 @@ const variants = {
 
 const Layout = props => {
   const [theme, setTheme] = useState("isDark");
+  const [showNav, toggleNav] = useCycle(true, false);
+  const [showMenuButton, setMenuButton] = useState(false);
+
+  useEffect(() => {
+    if (window) {
+      if (window.innerWidth < 600) {
+        toggleNav();
+        setMenuButton(true);
+      }
+    }
+  }, []);
 
   return (
     <>
-      {props.showNav !== false && <Navbar />}
+      {props.showNav !== false && showNav !== false && (
+        <Navbar toggleNav={toggleNav} showClose={showMenuButton} />
+      )}
+      {showMenuButton === true && props.showNav !== false && (
+        <button className="menu-btn" onClick={() => toggleNav()}>
+          &equiv;
+        </button>
+      )}
       <motion.div
         className={`layout-wrapper ${theme}`}
         initial={"hide"}

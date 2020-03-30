@@ -92,6 +92,26 @@ a {
 
 // shared components
 
+.menu-btn {
+  background: transparent;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  border: none;
+  color: $secondary;
+  font-size: 4rem;
+  margin: 0;
+  line-height: 0.5;
+  transition: all 0.3s ease;
+}
+
+.close-btn {
+  @extend .menu-btn;
+  font-size: 2.5rem;
+  line-height: 1;
+  transform: rotate(90deg);
+}
+
 .navbar {
   width: 300px;
   height: 400px;
@@ -151,6 +171,14 @@ a {
         }
       }
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    background-color: $accent;
+    height: 100vh;
+    width: 190px;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
   }
 }
 
@@ -278,6 +306,12 @@ img {
       max-width: 70%;
       line-height: 1.5;
     }
+
+    @media screen and (max-width: $mobile) {
+      p {
+        max-width: 90%;
+      }
+    }
   }
 }
 
@@ -301,11 +335,21 @@ img {
     margin-bottom: 2rem;
   }
 
-  p {
+  p,
+  ol,
+  ul {
     max-width: 80%;
     line-height: 1.7;
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 100%;
   }
 }
 
@@ -362,6 +406,10 @@ img {
       font-family: $rubik;
       font-weight: 300;
     }
+
+    &:hover {
+      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
@@ -393,5 +441,9 @@ img {
       line-height: 1.5;
       font-size: 0.8rem;
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: repeat(1, auto);
   }
 }

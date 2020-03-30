@@ -2,6 +2,7 @@ import { getData } from "../helpers";
 import { RichText } from "prismic-reactjs";
 import Layout from "../layouts";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const getStaticProps = async () => {
   const res = await getData("document.type", "case_study");
@@ -35,11 +36,15 @@ const Portfolio = ({ items, data }) => {
           <div className="case-list">
             {items.map(x => (
               <Link key={x.slug} href={`/case/${x.slug}`}>
-                <div className="item">
+                <motion.div
+                  className="item"
+                  whileHover={{ opacity: 0.7, scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
                   <img src={x.data.hero_image.url} />
                   <h4>{x.data.listing_title}</h4>
                   <p>{x.data.listing_blurb}</p>
-                </div>
+                </motion.div>
               </Link>
             ))}
           </div>
