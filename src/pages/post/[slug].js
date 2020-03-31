@@ -33,6 +33,17 @@ const BlogPost = ({ data }) => {
     <Layout>
       <Head>
         <title>{RichText.asText(data.title)} - Soham Adwani's Blog</title>
+        <meta
+          property="og:title"
+          content={RichText.asText(data.title) + "- Soham Adwani"}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={`https://og-image-5aj4qrfey.now.sh/${RichText.asText(
+            data.title
+          )}.png`}
+        />
       </Head>
       <div className="blogpost">
         <article className="post">

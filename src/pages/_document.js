@@ -14,6 +14,8 @@ class MyDoc extends Document {
             href="https://fonts.googleapis.com/css?family=Noto+Sans|Rubik:300,700&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <meta
             name="title"
             content="Soham Adwani - Web App Developer based in Indonesia"
