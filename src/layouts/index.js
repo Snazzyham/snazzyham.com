@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { motion, useCycle } from "framer-motion";
+import ReactGA from "react-ga";
 
 const variants = {
   hide: { scale: 0.1 },
@@ -21,6 +22,7 @@ const Layout = props => {
         toggleNav();
         setMenuButton(true);
       }
+      ReactGA.initialize("UA-84133610-1");
     }
   }, []);
 

@@ -16,7 +16,6 @@ export const getStaticProps = async () => {
 };
 
 const Index = ({ data, navLinks }) => {
-  console.log(data, navLinks);
   return (
     <Layout showNav={false}>
       <div className="homepage">
