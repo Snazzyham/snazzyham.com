@@ -1,6 +1,7 @@
 import { getData } from "../../helpers";
 import { RichText } from "prismic-reactjs";
 import Layout from "../../layouts";
+import Head from "next/head";
 
 export const getStaticPaths = async () => {
   const res = await getData("document.type", "blog_post");
@@ -30,6 +31,9 @@ export const getStaticProps = async ctx => {
 const BlogPost = ({ data }) => {
   return (
     <Layout>
+      <Head>
+        <title>{RichText.asText(data.title)} - Soham Adwani's Blog</title>
+      </Head>
       <div className="blogpost">
         <article className="post">
           <h1>{RichText.asText(data.title)}</h1>
