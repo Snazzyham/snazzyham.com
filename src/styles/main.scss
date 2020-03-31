@@ -337,11 +337,17 @@ img {
 
   p,
   ol,
-  ul {
+  ul,
+  pre {
     max-width: 80%;
     line-height: 1.7;
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  pre {
+    overflow: scroll;
+    font-size: 0.75rem;
   }
 
   li {
@@ -379,6 +385,10 @@ img {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: repeat(2, auto);
+  }
+
   .item {
     width: 300px;
     border-radius: 0.3rem;
@@ -409,6 +419,15 @@ img {
 
     &:hover {
       box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 175px;
+
+      img {
+        width: 175px;
+        height: 120px;
+      }
     }
   }
 }
