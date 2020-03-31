@@ -30,7 +30,7 @@ export const getStaticProps = async ctx => {
 
 const BlogPost = ({ data }) => {
   return (
-    <Layout>
+    <Layout isPost={true}>
       <Head>
         <title>{RichText.asText(data.title)} - Soham Adwani's Blog</title>
         <meta
@@ -40,6 +40,35 @@ const BlogPost = ({ data }) => {
         <meta property="og:type" content="article" />
         <meta
           property="og:image"
+          content={`https://og-image-5aj4qrfey.now.sh/${RichText.asText(
+            data.title
+          )}.png`}
+        />
+
+        <meta
+          property="og:url"
+          content={"https://snazzyham.com/post/" + data.slug}
+        />
+        <meta
+          property="og:description"
+          content="A blog post from Soham Adwani"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={"https://snazzyham.com/post/" + data.slug}
+        />
+        <meta
+          property="twitter:title"
+          content={RichText.asText(data.title) + "- Soham Adwani"}
+        />
+        <meta
+          property="twitter:description"
+          content="Soham Adwani is a full stack web application developer based in Indonesia."
+        />
+        <meta
+          property="twitter:image"
           content={`https://og-image-5aj4qrfey.now.sh/${RichText.asText(
             data.title
           )}.png`}
