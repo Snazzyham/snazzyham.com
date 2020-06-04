@@ -24,6 +24,11 @@ class MyDoc extends Document {
             name="description"
             content="Soham Adwani is a full stack web application developer based in Indonesia."
           />
+          <script
+            data-goatcounter="https://snz.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+          ></script>
         </Head>
         <body>
           <Main />
