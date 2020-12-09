@@ -254,10 +254,12 @@ img {
       max-width: 30rem;
     }
   }
+  .sidebar {
+    width: 35%;
+  }
 
   .client-content {
-    width: 30%;
-
+    margin-bottom: 4rem;
     ul {
       list-style-type: none;
       padding-left: 0;
@@ -271,10 +273,31 @@ img {
   @media screen and (max-width: $tablet) {
     flex-direction: column;
 
-    .client-content {
+    .sidebar {
       width: 70%;
       margin-top: 2rem;
     }
+  }
+}
+
+.award-item {
+  margin-bottom: 2rem;
+  h4,
+  p {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+    letter-spacing: 0.05rem;
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-family: $rubik;
+    font-size: 0.9rem;
   }
 }
 
@@ -321,7 +344,7 @@ img {
   padding-left: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  width: 75%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
 
