@@ -5,7 +5,7 @@
   "author": "Soham Adwani <snazzyham@gmail.com>",
   "dependencies": {
     "dayjs": "^1.7.0",
-    "gatsby": "^1.9.273",
+    "gatsby": "^5.3.3",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-preact": "^1.0.17",
     "gatsby-plugin-react-helmet": "^2.0.10",
